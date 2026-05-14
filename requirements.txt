@@ -5,3 +5,4 @@ requests
 allure-pytest
 allure-python-commons
 pyyaml
+requests

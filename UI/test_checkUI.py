@@ -1,11 +1,12 @@
 import allure
 import pytest
 from playwright.sync_api import Page, expect
-import time
 from pytest_playwright.pytest_playwright import page
 
 @allure.title("Проверка авторизации на сайте apex.ru c корректными login и password")
 @allure.tag("Позитивный кейс")
+
+@pytest.mark.UITest
 @pytest.mark.critReg
 def test_auth_right(page: Page, user_config):
     with allure.step(f"Заходим на {user_config.piUrlUI}"):
@@ -22,6 +23,7 @@ def test_auth_right(page: Page, user_config):
 
 @allure.title("Проверка авторизации на сайте apex.ru c некорректными login и password")
 @allure.tag("Негативный кейс")
+@pytest.mark.UITest
 @pytest.mark.critReg
 def test_auth_not_right(page: Page, user_config):
     with allure.step(f"Заходим на {user_config.piUrlUI}"):
