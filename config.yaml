@@ -1,0 +1,7 @@
+dev:
+  UI:
+    urlUI: https://apex.ru/catalog/zapchasti
+    userNotValid: Lex
+    passNotValid: 123
+    userValid: Alex
+    passValid: 123
